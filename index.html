@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Kos Al Fahri</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+  <nav class="navbar navbar-expand-lg fixed-top shadow-sm">
+    <div class="container">
+      <a class="navbar-brand fw-bold fs-4" href="#">
+        <i class="fa fa-home me-2"></i>Kos Al Fahri
+      </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+        aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav mx-auto">
+          <li class="nav-item"><a class="nav-link" href="#beranda">Beranda</a></li>
+          <li class="nav-item"><a class="nav-link" href="#fasilitas">Fasilitas</a></li>
+          <li class="nav-item"><a class="nav-link" href="#kamar">Kamar</a></li>
+          <li class="nav-item"><a class="nav-link" href="#lokasi">Lokasi</a></li>
+        </ul>
+        <a href="#kontak" class="btn btn-soft rounded-pill px-4">Booking Sekarang</a>
+      </div>
+    </div>
+  </nav>
+
+  <div class="hero" id="beranda">
+    <div class="hero-content">
+      <h1>Kos Putri Nyaman, Aman & Strategis</h1>
+      <p>Tinggal di pusat kota dengan fasilitas lengkap, harga terjangkau, dan suasana yang nyaman.</p>
+      <a href="#kamar" class="btn btn-soft rounded-pill px-4">Lihat Kamar</a>
+    </div>
+  </div>
+
+  <section id="fasilitas" class="container py-5">
+    <h2 class="section-title text-center mb-5">Fasilitas Unggulan</h2>
+    <div class="row text-center">
+      <div class="col-md-4">
+        <div class="feature-card">
+          <i class="fa fa-bolt"></i>
+          <h5>Free Listrik & Air</h5>
+          <p>Biaya listrik dan air sudah termasuk dalam harga sewa.</p>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="feature-card">
+          <i class="fa fa-shield-halved"></i>
+          <h5>Keamanan</h5>
+          <p>Keamanan aman dan kendaraan terkunci ganda.</p>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="feature-card">
+          <i class="fa fa-map-marker-alt"></i>
+          <h5>Lokasi Strategis</h5>
+          <p>Dekat kampus, Rumah Sakit, dan Pusat Perbelanjaan.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="kamar" class="container py-5">
+    <h2 class="section-title text-center mb-5">Tipe Kamar</h2>
+    <div class="row justify-content-center">
+      <div class="col-md-6">
+        <div class="room-card">
+          <img src="img/kamar.jpg" class="img-fluid mb-3 rounded" alt="kamar utama">
+          <h5>Kamar</h5>
+          <p class="text-muted">Nyaman, bersih, aman, cocok untuk mahasiswi maupun karyawati</p>
+          <ul class="list-unstyled text-start px-3">
+            <li><i class="fa fa-check text-success me-2"></i>Kasur Lantai</li>
+            <li><i class="fa fa-check text-success me-2"></i>Lemari Plastik</li>
+            <li><i class="fa fa-check text-success me-2"></i>Kamar Mandi Dalam</li>
+            <li><i class="fa fa-check text-success me-2"></i>Kipas Angin</li>
+          </ul>
+          <h4 class="mt-3 text-danger">Rp500.000 / bulan</h4>
+          <a href="#kontak" class="btn btn-danger rounded-pill px-4 mt-2">Booking Sekarang</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="lokasi" class="bg-light py-5">
+    <div class="container">
+      <h2 class="section-title text-center mb-5">Lokasi & Tempat Terdekat</h2>
+
+      <div class="row g-4 align-items-start">
+        <div class="col-lg-7">
+          <div class="map-container shadow rounded overflow-hidden">
+            <div class="ratio ratio-16x9 h-100" style="min-height: 400px;">
+              <iframe
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d990.2901369510467!2d109.12395652843334!3d-6.871358068096331!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e6fb9af776e8de5%3A0x15539221f9fbf5df!2sKost%20Putri%20%22Al%20Fahri%22!5e0!3m2!1sid!2sid!4v1757090040448!5m2!1sid!2sid"
+                style="border:0;" allowfullscreen="" loading="lazy">
+              </iframe>
+            </div>
+          </div>
+          <div class="text-center mt-3">
+            <a href="https://maps.app.goo.gl/3wREG4499N9omcRFA" target="_blank"
+              class="btn btn-primary rounded-pill w-100">
+              <i class="fa fa-map-location-dot me-2"></i>Buka di Google Maps
+            </a>
+          </div>
+        </div>
+
+        <div class="col-lg-5">
+          <div class="bg-white p-4 rounded shadow h-100">
+            <h4 class="mb-3 text-dark fw-bold"><i class="fa fa-compass me-2 text-danger"></i>Destinasi Sekitar</h4>
+
+            <div class="d-flex gap-2 mb-3 overflow-auto pb-2 no-scrollbar" id="filterContainer">
+            </div>
+
+            <ul class="nearby-places list-unstyled" id="nearbyList">
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <p>© 2025 Kos Al Fahri | Versi 1.0</p>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="script.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,285 @@
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 80px; /* Adjusted for navbar */
+}
+
+body {
+  font-family: 'Segoe UI', sans-serif;
+  background-color: #fffafc;
+  color: #444;
+  line-height: 1.6;
+}
+
+/* Navbar */
+.navbar {
+  background: rgba(255, 255, 255, 0.95) !important;
+  backdrop-filter: blur(8px);
+  box-shadow: 0 4px 12px rgba(232, 62, 140, 0.08);
+  transition: all 0.3s ease;
+}
+
+.navbar .nav-link {
+  font-weight: 500;
+  color: #555;
+  padding: 8px 16px;
+  border-radius: 20px;
+  transition: all 0.3s ease;
+}
+
+/* Hapus ".nav-link.active", sisakan hover saja */
+.navbar .nav-link:hover {
+  color: #e83e8c;
+  background-color: rgba(232, 62, 140, 0.1);
+}
+
+.navbar-brand {
+  letter-spacing: 1px;
+  color: #e83e8c !important;
+  font-weight: 700;
+}
+
+/* Hero */
+.hero {
+  background: url('img/cover.jpg') no-repeat center center/cover;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  color: white;
+  position: relative;
+}
+
+.hero::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(rgba(0, 0, 0, 0.55), rgba(0, 0, 0, 0.25));
+}
+
+.hero-content {
+  position: relative;
+  z-index: 2;
+  animation: fadeInUp 1.2s ease-out;
+}
+
+.hero h1 {
+  font-size: 3rem;
+  font-weight: 700;
+}
+
+.hero p {
+  font-size: 1.15rem;
+  margin: 18px 0 28px;
+}
+
+/* Button & Animations */
+.btn-soft {
+  background: #fff;
+  color: #e83e8c;
+  border: none;
+  border-radius: 25px;
+  padding: 10px 22px;
+  font-weight: 500;
+  transition: all 0.3s ease;
+  box-shadow: 0 3px 8px rgba(232, 62, 140, 0.15);
+}
+
+.btn-soft:hover {
+  background: #e83e8c;
+  color: #fff;
+  transform: translateY(-3px);
+  box-shadow: 0 6px 15px rgba(232, 62, 140, 0.3);
+}
+
+@keyframes fadeInUp {
+  from { opacity: 0; transform: translateY(40px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* Section Title (Centered styling handled by Bootstrap classes, this adds the underline) */
+.section-title {
+  font-weight: 700;
+  font-size: 2rem;
+  color: #e83e8c;
+  position: relative;
+  display: inline-block;
+  /* Ensure parent has text-center */
+}
+
+.section-title::after {
+  content: "";
+  display: block;
+  width: 60%;
+  height: 3px;
+  background: #e83e8c;
+  margin: 10px auto 0;
+  border-radius: 2px;
+}
+
+/* Cards (Features & Rooms) */
+.feature-card, .room-card {
+  background: #fff;
+  border-radius: 18px;
+  padding: 30px 20px;
+  transition: all 0.3s ease;
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.05);
+  margin-bottom: 20px;
+}
+
+.feature-card:hover, .room-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 10px 22px rgba(232, 62, 140, 0.15);
+}
+
+.feature-card i {
+  font-size: 2.3rem;
+  color: #e83e8c;
+  margin-bottom: 12px;
+}
+
+.room-card img {
+  border-radius: 15px;
+}
+
+/* --- NEW STYLES FOR LOKASI LIST --- */
+.nearby-places {
+    max-height: 500px;
+    overflow-y: auto; /* Scroll jika list terlalu panjang */
+    padding-right: 5px; 
+}
+
+/* Scrollbar cantik */
+.nearby-places::-webkit-scrollbar {
+    width: 6px;
+}
+.nearby-places::-webkit-scrollbar-track {
+    background: #f1f1f1;
+}
+.nearby-places::-webkit-scrollbar-thumb {
+    background: #e83e8c;
+    border-radius: 10px;
+}
+
+.nearby-places li {
+    padding: 12px 15px;
+    margin-bottom: 12px;
+    border-radius: 12px;
+    background: #fff;
+    border: 1px solid #f0f0f0;
+    cursor: pointer;
+    transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+    position: relative;
+    overflow: hidden;
+}
+
+/* Hover Animation: Geser ke kanan & Ubah warna */
+.nearby-places li:hover {
+    background: linear-gradient(to right, #fff0f5, #fff);
+    border-color: #e83e8c;
+    transform: translateX(8px);
+    box-shadow: 0 4px 12px rgba(232, 62, 140, 0.15);
+}
+
+.nearby-places li strong {
+    color: #444;
+    font-size: 1.05rem;
+}
+
+.nearby-places li:hover strong {
+    color: #c2185b; /* Warna teks judul berubah saat hover */
+}
+
+.nearby-places .distance {
+    font-size: 0.85rem;
+    color: #777;
+    display: block;
+    margin-top: 4px;
+}
+
+.nearby-places .icon-box {
+    width: 40px;
+    height: 40px;
+    background: #f8f9fa;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: 15px;
+    color: #e83e8c;
+    transition: all 0.3s ease;
+}
+
+.nearby-places li:hover .icon-box {
+    background: #e83e8c;
+    color: #fff;
+}
+/* --- END NEW STYLES --- */
+
+/* Footer */
+footer {
+  background: #fff0f5;
+  padding: 25px;
+  text-align: center;
+  color: #777;
+  font-size: 0.9rem;
+  border-top: 1px solid rgba(232, 62, 140, 0.1);
+}
+
+/* --- STYLE TAMBAHAN UNTUK FILTER --- */
+
+/* Container Filter agar bisa di-scroll horizontal di HP */
+#filterContainer {
+    white-space: nowrap;
+    -webkit-overflow-scrolling: touch;
+}
+
+/* Menyembunyikan scrollbar default tapi tetap bisa discroll */
+.no-scrollbar::-webkit-scrollbar {
+    height: 4px; 
+}
+.no-scrollbar::-webkit-scrollbar-thumb {
+    background: #ddd; 
+    border-radius: 10px;
+}
+
+/* Tombol Filter */
+.filter-btn {
+    border: 1px solid #e83e8c;
+    color: #e83e8c;
+    background: transparent;
+    border-radius: 20px;
+    padding: 6px 16px;
+    font-size: 0.85rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    flex-shrink: 0; /* Agar tombol tidak mengecil */
+}
+
+.filter-btn:hover {
+    background: rgba(232, 62, 140, 0.1);
+}
+
+/* State Aktif (Saat tombol dipilih) */
+.filter-btn.active {
+    background: #e83e8c;
+    color: #fff;
+    box-shadow: 0 4px 10px rgba(232, 62, 140, 0.3);
+}
+
+/* Animasi Masuk List Item */
+@keyframes fadeInRight {
+    from {
+        opacity: 0;
+        transform: translateX(10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+.animate-item {
+    animation: fadeInRight 0.4s ease-out forwards;
+}
